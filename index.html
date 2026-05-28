@@ -1,107 +1,266 @@
-<!doctype html>
-<!-- coffee · third-wave-mono · hero-layout 0 · svc-layout 0 · generated from live Google Places data for Enchanted Coffee Bar -->
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Enchanted Coffee Bar — Cafe, La Mirada</title>
-<meta name="description" content="Enchanted Coffee Bar — Cafe in La Mirada.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<!-- coffee · dreamy-storybook · hero-layout 3 · svc-layout 3 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enchanted Coffee Bar — La Mirada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f6f3;--surface:#fff;--ink:#181818;--mut:#6a6a6a;--acc:#c4502b;--line:#d8d6d0}
+:root{
+  --bg:#f7f1f7;
+  --cream:#fffaf3;
+  --ink:#2a1f3a;
+  --mute:#7a6a8a;
+  --lav:#b89dd9;
+  --plum:#6e3f9c;
+  --rose:#e8b4cb;
+  --gold:#d4a574;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',Georgia,serif;background:var(--bg);color:var(--ink);line-height:1.62;-webkit-font-smoothing:antialiased}
-.disp{font-family:'Inter Tight',sans-serif}
-a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
-img{max-width:100%;display:block}
-.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
-header{padding:16px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:30}
-header .row{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:21px;letter-spacing:-.01em;color:var(--ink)}
-nav a{margin-left:20px;color:var(--mut);font-size:13.5px;font-weight:500}nav a:hover{color:var(--acc);text-decoration:none}
-.callbtn{display:inline-flex;align-items:center;gap:7px;background:var(--acc);color:#fff;padding:9px 16px;border-radius:8px;font-weight:600;font-size:13.5px;margin-left:20px}
-.callbtn:hover{filter:brightness(.92);text-decoration:none;color:#fff}
-.hero{padding:72px 0 60px}
-.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
-.kicker{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:18px}
-h1{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(40px,6.2vw,72px);line-height:1.02;letter-spacing:-.025em;margin-bottom:20px}
-.lede{font-size:18px;color:var(--mut);max-width:480px;margin-bottom:28px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:14px;border:1.5px solid var(--ink);color:var(--ink);background:transparent}
-.btn:hover{background:var(--ink);color:var(--bg);text-decoration:none}
-.btn.solid{background:var(--acc);border-color:var(--acc);color:#fff}
-.btn.solid:hover{filter:brightness(.92);color:#fff}
-.hero-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;;}
-.section{padding:62px 0;border-top:1px solid var(--line)}
-.kick{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:8px}
-h2{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:34px;letter-spacing:-.02em;margin-bottom:8px}
+html,body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.cg{font-family:'Cormorant Garamond',serif}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-.svcs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
-.svcs .svc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
-.svc-rows{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
-.svc-rows .svc-row{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px 26px;display:flex;align-items:baseline;gap:14px}
-.svc-list{margin-top:30px;border-top:1px solid var(--line)}
-.svc-list .svc-line{display:flex;align-items:baseline;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
-.snum{font-family:'Inter Tight',sans-serif;font-size:13px;color:var(--acc);font-weight:600;letter-spacing:.08em}
-.svcs .svc h3,.svc-rows .svc-row h3,.svc-list .svc-line h3{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:19px;margin-top:10px;letter-spacing:-.01em}
+/* dreamy gradient backdrop */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:
+  radial-gradient(circle at 15% 10%, rgba(184,157,217,.22), transparent 40%),
+  radial-gradient(circle at 85% 80%, rgba(232,180,203,.22), transparent 45%),
+  radial-gradient(circle at 50% 50%, rgba(212,165,116,.08), transparent 60%)
+}
 
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
-.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
-.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
-.q{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
-.q p{font-family:'Inter Tight',sans-serif;font-size:18px;line-height:1.5;margin-bottom:12px}
-.q .who{font-size:13px;font-weight:600;color:var(--acc)}
-.visit{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:28px}
-.visit .info{padding:30px 32px;background:var(--surface)}
-.hrow{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
-.hrow:last-child{border-bottom:0}.hd{font-weight:600}.ht{color:var(--mut)}
-.visit iframe{width:100%;height:100%;min-height:360px;border:0}
-.contact-line{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-footer{background:var(--ink);color:var(--bg);padding:32px 0 46px;border-top:1px solid var(--line)}
-footer .fbrand{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:18px}
-footer .credit{margin-top:10px;font-size:13px;opacity:.82}footer a{color:var(--acc)}
-@media(max-width:800px){.hero .grid{grid-template-columns:1fr}.hero-img{order:0;aspect-ratio:16/10}.svcs{grid-template-columns:1fr 1fr}.svc-rows{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.quotes,.visit{grid-template-columns:1fr}nav{display:none}.visit iframe{min-height:280px}}
-</style></head><body>
-<header><div class="wrap row">
+/* nav */
+nav{padding:26px 0}
+nav .row{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:30px;letter-spacing:.5px;color:var(--plum)}
+.brand::before{content:"✦ ";color:var(--gold)}
+.brand::after{content:" ✦";color:var(--gold)}
+.nlinks{display:flex;gap:30px;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:500}
+.nlinks a{color:var(--mute);text-decoration:none}
+.nlinks a:hover{color:var(--plum)}
+.callbtn{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;text-decoration:none;color:var(--plum);font-weight:700;padding:8px 20px;border:1px solid var(--lav);border-radius:999px;background:var(--cream)}
+
+/* hero */
+.hero{padding:60px 0 100px;text-align:center;position:relative}
+.kicker{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(58px,9vw,128px);line-height:.95;letter-spacing:-2px;color:var(--ink);max-width:900px;margin:0 auto}
+.hero h1 em{font-style:italic;color:var(--plum);position:relative}
+.hero h1 em::after{content:"✦";position:absolute;top:-.4em;right:-.4em;font-size:.3em;color:var(--gold)}
+.hero .sub{max-width:600px;margin:32px auto 0;font-size:19px;color:var(--mute);line-height:1.6}
+.hero .pills{display:flex;justify-content:center;gap:14px;margin-top:36px;flex-wrap:wrap}
+.pill{padding:8px 20px;background:var(--cream);border:1px solid var(--lav);border-radius:999px;font-size:13px;color:var(--plum);font-weight:500;letter-spacing:.5px}
+
+/* photo strip — woven */
+.weave{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:0 32px;max-width:1200px;margin-left:auto;margin-right:auto}
+.weave div{aspect-ratio:4/5;background:#999 center/cover no-repeat;border-radius:18px}
+.weave div:nth-child(1){transform:translateY(20px) rotate(-2deg)}
+.weave div:nth-child(2){transform:translateY(-10px)}
+.weave div:nth-child(3){transform:translateY(20px) rotate(2deg)}
+
+/* story */
+.story{padding:140px 0 100px}
+.story .grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:center}
+.story .badge{display:inline-block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
+.story h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:60px;line-height:1;letter-spacing:-1.5px;color:var(--ink)}
+.story h2 em{font-style:italic;color:var(--plum)}
+.story p{margin-top:22px;font-size:17px;color:#4a3f5a}
+.story p + p{margin-top:14px}
+.story .illu{aspect-ratio:1/1;background:var(--cream) center/cover no-repeat;border-radius:50%;border:8px solid var(--cream);box-shadow:0 30px 80px rgba(110,63,156,.18)}
+
+/* spell-list (menu) */
+.spells{padding:120px 0;background:linear-gradient(180deg, var(--cream), var(--bg))}
+.spells .center{text-align:center;margin-bottom:70px}
+.spells .badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--gold);letter-spacing:3px;text-transform:uppercase}
+.spells h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:64px;letter-spacing:-1.5px;margin-top:10px}
+.spells h2 em{font-style:italic;color:var(--plum)}
+.spell-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.spell{background:var(--cream);padding:36px 32px;border-radius:20px;border:1px solid rgba(184,157,217,.4);display:flex;justify-content:space-between;align-items:start;gap:24px;position:relative}
+.spell .lhs{flex:1}
+.spell .star{position:absolute;top:18px;right:24px;color:var(--gold);font-size:14px;letter-spacing:2px}
+.spell h3{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:30px;letter-spacing:-.5px}
+.spell h3 em{font-style:italic;color:var(--plum)}
+.spell .desc{margin-top:10px;color:var(--mute);font-size:14px;max-width:340px}
+.spell .price{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;color:var(--plum);text-align:right;flex-shrink:0}
+.spell .price small{display:block;font-size:11px;font-weight:500;color:var(--mute);letter-spacing:2px;text-transform:uppercase;font-family:'Manrope',sans-serif;margin-top:6px}
+
+/* praise */
+.praise{padding:120px 0;text-align:center}
+.praise .badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+.praise h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:64px;letter-spacing:-1.5px}
+.praise h2 em{font-style:italic;color:var(--plum)}
+.praise .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:60px;text-align:left}
+.prc{background:var(--cream);padding:36px 30px;border-radius:24px;border:1px solid rgba(184,157,217,.4);position:relative}
+.prc::before{content:"✦";position:absolute;top:18px;right:24px;color:var(--gold);font-size:24px}
+.prc .stars{color:var(--gold);font-size:14px;letter-spacing:3px}
+.prc .t{margin-top:14px;font-size:15px;color:#3d3349;line-height:1.7;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:18px}
+.prc .who{margin-top:22px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--plum);font-weight:600}
+
+/* visit — moonpane */
+.visit{padding:120px 0;background:linear-gradient(180deg, var(--bg), var(--cream))}
+.visit .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center}
+.visit .badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--gold);letter-spacing:3px;text-transform:uppercase}
+.visit h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:64px;letter-spacing:-1.5px;margin-top:12px}
+.visit h2 em{font-style:italic;color:var(--plum)}
+.visit p.intro{margin-top:18px;font-size:17px;color:#4a3f5a;max-width:480px}
+.visit .info{margin-top:32px;display:grid;gap:18px}
+.info .row{padding:14px 18px;background:var(--cream);border-radius:14px;border:1px solid rgba(184,157,217,.3);display:flex;gap:14px;align-items:center}
+.info .row .ico{width:34px;height:34px;border-radius:50%;background:var(--lav);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;flex-shrink:0}
+.info .row b{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;color:var(--ink);display:block}
+.info .row span{font-size:14px;color:var(--mute)}
+.info .row a{color:var(--plum);text-decoration:none;font-weight:600}
+.hourblk{background:var(--cream);border-radius:24px;padding:40px 36px;border:1px solid rgba(184,157,217,.4)}
+.hourblk h3{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:38px;color:var(--plum);margin-bottom:24px;text-align:center}
+.hourblk h3::before{content:"✦ "}
+.hourblk h3::after{content:" ✦"}
+.hr{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px dashed rgba(184,157,217,.5);font-size:15px}
+.hr:last-child{border-bottom:none}
+.hr b{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;color:var(--ink)}
+.hr span{color:var(--mute)}
+
+/* footer */
+footer{padding:80px 0 50px;text-align:center;background:var(--plum);color:var(--cream)}
+footer .b{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:44px;color:#fff;letter-spacing:-.5px}
+footer .b::before{content:"✦ ";color:var(--gold)}
+footer .b::after{content:" ✦";color:var(--gold)}
+footer .tag{margin-top:8px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--rose)}
+footer .det{margin-top:24px;font-size:14px;color:#e9d4f0}
+footer .det a{color:#fff}
+footer .credit{margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,.18);font-size:12px;color:#d4b8e0}
+footer .credit a{color:var(--rose);text-decoration:underline}
+
+@media (max-width:880px){
+  .hero h1{font-size:60px}
+  .story .grid,.visit .grid{grid-template-columns:1fr;gap:40px}
+  .spell-grid,.praise .grid,.weave{grid-template-columns:1fr}
+  .nlinks{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap row">
   <div class="brand">Enchanted Coffee Bar</div>
-  <div style="display:flex;align-items:center"><nav><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a></nav><a class="callbtn" href="tel:+15629021982">Call (562) 902-1982</a></div>
-</div></header>
-
-<section class="hero"><div class="wrap"><div class="grid">
-  <div>
-    <span class="kicker">A very good cup</span>
-    <h1 class="disp">Coffee, made carefully.</h1>
-    <p class="lede">A neighborhood cafe that's earned its regulars the honest way — by being good at what it does. Here's everything you need to find us, reach us, and stop by.</p>
-    <div class="cta"><a class="btn solid" href="tel:+15629021982">Call (562) 902-1982</a><a class="btn" href="#visit">Hours &amp; location</a></div>
+  <div class="nlinks">
+    <a href="#story">Our Spell</a>
+    <a href="#menu">The Menu</a>
+    <a href="#visit">Visit Us</a>
   </div>
-  <img class="hero-img" src="https://lh3.googleusercontent.com/place-photos/AJRVUZMelAxOq0DAYBUTi3vvQJgB2mi8sjBpR-An1h1PGiY9SU2hwN5igjVrOGCTd_rgqYcYMEuXAZa4vbAtKm3mMyc5Wn43nJiKp0Tn42HMxaRdfEzzJpw1XBlI2dNoK7Gd4Nd-nlyv0pCCyFvPWw=s4800-w1600" alt="Enchanted Coffee Bar">
-</div></div></section>
+  <a class="callbtn" href="tel:+15629021982">(562) 902-1982</a>
+</div></nav>
 
-<section class="section" id="services"><div class="wrap">
-  <div class="kick">A very good cup</div>
-  <h2>What we do.</h2>
-  <div class="svcs"><div class="svc"><span class="snum">01</span><h3>Espresso &amp; pour-overs</h3></div><div class="svc"><span class="snum">02</span><h3>Fresh-roast drip</h3></div><div class="svc"><span class="snum">03</span><h3>Matcha &amp; specialty</h3></div><div class="svc"><span class="snum">04</span><h3>Pastries daily</h3></div></div>
-</div></section>
-
-<section class="section gal-sec"><div class="wrap"><div class="kick">A look inside</div><h2>The place itself.</h2><div class="gallery"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMl2dmUPAvO-b0Tj0gIY_opvcIseHOZphmKXdDl_GvlGnQZvVbv2ToE_Y9MEpIwrtXsMBh0pvIjhPOR7111vgkpDWPBAyUoGQOVMdCaRqyiWudgEygn_Pzlirlp3R56ep7KXuH43LCsQdA8QQ=s4800-w1600" alt="Enchanted Coffee Bar" loading="lazy"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPBaAzWjyqSq1VFtFfeFNVGRRu2FhtFEX36abEE-CIsesWX2afnKJ0TU2VAAeztANossV6bb-JilEvzSY_zXI7h4eobeyiOeCwqm_GdFGTq6usg_pJFoZPCcfjRY3aZjt1LzHlHS5DUIkNAP9zJVlfIAg=s4800-w1600" alt="Enchanted Coffee Bar" loading="lazy"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPjeiAs49zeYOhKKzdMXvUmTkWwgaSEwJc56VxwDlnKPnyWM27ncbhU-UDMMZ9ywS6OhqQZLmawIL6APrRt_Fr7kq4slLmQpcEMUnAUCQBPCirVzKsK2rYODOw5iqDGvLw0xGa-j48r8IVgtnQLZQz10w=s4800-w1600" alt="Enchanted Coffee Bar" loading="lazy"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMN--hXE4i9NLPrQFwq9ok1WrqEiWbGwwHvb5xqiKA2nBaw9hUe259K8RHvvdxf385ks-J2WPjdmosnB3GlD9xgBYFjE-URJgtU0n2HVV7uoHEfR74y4lh3-0kAkYxPcNxoNpY2vFpK-uGiGQ=s4800-w1600" alt="Enchanted Coffee Bar" loading="lazy"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMihrXfur7_JUz9jRcys7rFstVLQMT4j35FPOAmOqzLWu8sNUggqjmesV1-Wr95HSdFnKAGtzCBACabKccMg8oe53ku8DhtOiCp8n2lF4-Eoh7UBSyBr_Hy4In0mVXwaIQroKp7AO3DoKNJ9eW5d48d-g=s4800-w1600" alt="Enchanted Coffee Bar" loading="lazy"></div></div></section>
-<section class="section"><div class="wrap"><div class="kick">In their words</div><h2>What people say.</h2><div class="quotes"><div class="q"><p>Came here after hike, great options for drinks and quick bites. Matcha tonic was very refreshing with a unique taste. Their Arugula turkey sandwich was a great combination with the matcha. Salmon bagel was also savory.</p><div class="who">— Antonio J.</div></div><div class="q"><p>The avocado truffle was great. Just wish they had a little bit more seasoning for the avocado. Has a great atmosphere for a coffee shop</p><div class="who">— Braxton M.</div></div><div class="q"><p>overall: 8/10 insta: @rach.foodie  drinks/food🍵 • 𝚊𝚟𝚘𝚌𝚊𝚍𝚘 𝚝𝚛𝚞𝚏𝚏𝚕𝚎 𝚝𝚘𝚊𝚜𝚝 • 𝚊𝚕𝚖𝚘𝚗𝚍 𝚌𝚛𝚘𝚜𝚜𝚒𝚊𝚗𝚝 • 𝚖𝚊𝚝𝚌𝚑𝚊 𝚕𝚊𝚝𝚝𝚎 𝚠/ 𝚌𝚛𝚎𝚊𝚖 𝚝𝚘𝚙 • 𝚜𝚝𝚛𝚊𝚠𝚋𝚎𝚛𝚛𝚢 𝚜𝚑𝚘𝚛𝚝𝚌𝚊𝚔𝚎 𝚕𝚊𝚝𝚝𝚎 𝚠/ 𝚌𝚛𝚎𝚊𝚖 𝚝𝚘𝚙 [𝚘𝚊𝚝, 𝚊𝚕𝚖𝚘𝚗𝚍, 𝚌𝚘𝚌𝚘𝚗𝚞𝚝 𝚖𝚒𝚕𝚔 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎]  perfect cafe to grab…</p><div class="who">— Rachel K.</div></div><div class="q"><p>Usually see a line here but the coffee is good. Spanish latte was good. Parking garage is across the street.  Would order online next time first.</p><div class="who">— sandra</div></div></div></div></section>
-
-<section class="section" id="visit"><div class="wrap">
-  <div class="kick">Find us</div>
-  <h2>Visit Enchanted.</h2>
-  <div class="visit">
-    <div class="info">
-      <div class="contact-line"><a class="btn solid" href="tel:+15629021982">Call (562) 902-1982</a><a class="btn" href="https://www.google.com/maps/search/?api=1&query=13391+S+Beach+Blvd+A,+La+Mirada,+CA+90638,+USA" target="_blank" rel="noopener">Get directions</a></div>
-      <div class="hrow"><span class="hd">Address</span><span class="ht">13391 S Beach Blvd A, La Mirada, CA 90638, USA</span></div>
-      <div class="hrow"><span class="hd">Phone</span><span class="ht"><a href="tel:+15629021982">(562) 902-1982</a></span></div>
-      <div class="hrow"><span class="hd">Monday</span><span class="ht">7:00 AM – 9:00 PM</span></div><div class="hrow"><span class="hd">Tuesday</span><span class="ht">7:00 AM – 9:00 PM</span></div><div class="hrow"><span class="hd">Wednesday</span><span class="ht">7:00 AM – 9:00 PM</span></div><div class="hrow"><span class="hd">Thursday</span><span class="ht">7:00 AM – 9:00 PM</span></div><div class="hrow"><span class="hd">Friday</span><span class="ht">7:00 AM – 9:00 PM</span></div><div class="hrow"><span class="hd">Saturday</span><span class="ht">7:00 AM – 9:00 PM</span></div><div class="hrow"><span class="hd">Sunday</span><span class="ht">7:00 AM – 9:00 PM</span></div>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">✦ La Mirada · open 7am to 9pm ✦</div>
+    <h1>A little <em>magic</em>,<br>in every cup.</h1>
+    <p class="sub">Matcha tonics, avocado truffle toast, and a long table to linger at — Enchanted is the late-light café that turns ordinary mornings (and unhurried evenings) into something a touch more wondrous.</p>
+    <div class="pills">
+      <div class="pill">✦ Matcha</div>
+      <div class="pill">✦ Specialty Lattes</div>
+      <div class="pill">✦ Avocado Truffle Toast</div>
+      <div class="pill">✦ Open 14 hours</div>
     </div>
-    <iframe loading="lazy" src="https://www.google.com/maps?q=13391+S+Beach+Blvd+A,+La+Mirada,+CA+90638,+USA&output=embed" title="Map to Enchanted Coffee Bar"></iframe>
+  </div>
+</header>
+
+<div class="weave">
+  <div style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZMelAxOq0DAYBUTi3vvQJgB2mi8sjBpR-An1h1PGiY9SU2hw=s900')"></div>
+  <div style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZMl2dmUPAvO-b0Tj0gIY_opvcIseHOZphmKXdDl_GvlGnQZv=s900')"></div>
+  <div style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZPBaAzWjyqSq1VFtFfeFNVGRRu2FhtFEX36abEE-CIsesWX2=s900')"></div>
+</div>
+
+<section class="story" id="story"><div class="wrap">
+  <div class="grid">
+    <div class="illu" style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZPjeiAs49zeYOhKKzdMXvUmTkWwgaSEwJc56VxwDlnKPnyWM=s1000')"></div>
+    <div>
+      <div class="badge">✦ Our Story ✦</div>
+      <h2>Coffee, kept <em>curious</em>.</h2>
+      <p>Enchanted opened on South Beach Boulevard with one quiet promise: that a coffee bar could feel like a small adventure. The kind where you walk in for a matcha and walk out with a new favorite snack you couldn't have named twenty minutes earlier.</p>
+      <p>The menu rotates with what's good. Strawberry shortcake latte in the spring. Avocado truffle toast for the post-hike crowd. Almond croissants while they last. The room? Soft music, warm light, the right amount of bustle.</p>
+      <p>Come at sunrise. Come at sunset. We're open both ways.</p>
+    </div>
   </div>
 </div></section>
 
-<footer><div class="wrap">
-  <div class="fbrand">Enchanted Coffee Bar</div>
-  <div style="font-size:13px;opacity:.7;margin-top:4px">13391 S Beach Blvd A, La Mirada, CA 90638, USA</div>
+<section class="spells" id="menu"><div class="wrap">
+  <div class="center">
+    <div class="badge">✦ The Spell Book ✦</div>
+    <h2>What we <em>brew</em>.</h2>
+  </div>
+  <div class="spell-grid">
+    <div class="spell"><div class="lhs"><h3>Matcha <em>Tonic</em></h3><div class="desc">Unique, refreshing, gently fizzy — our most-talked-about pour.</div></div><div class="price">$6.50<small>signature</small></div></div>
+    <div class="spell"><div class="lhs"><h3>Strawberry <em>Shortcake</em> Latte</h3><div class="desc">Espresso, strawberry, vanilla cream top. Seasonal favorite.</div></div><div class="price">$6.95<small>w/ cream top</small></div></div>
+    <div class="spell"><div class="lhs"><h3>Matcha Latte <em>w/ Cream Top</em></h3><div class="desc">Ceremonial matcha, lightly sweetened cold foam crown.</div></div><div class="price">$6.50<small>house pour</small></div></div>
+    <div class="spell"><div class="lhs"><h3>Spanish <em>Latte</em></h3><div class="desc">Espresso meets sweetened condensed milk. Warm and balanced.</div></div><div class="price">$5.75</div></div>
+    <div class="spell"><div class="lhs"><h3>Avocado <em>Truffle</em> Toast</h3><div class="desc">Sourdough, smashed avocado, truffle oil, flaked salt.</div></div><div class="price">$9.50<small>brunch</small></div></div>
+    <div class="spell"><div class="lhs"><h3>Almond <em>Croissant</em></h3><div class="desc">Buttery, glazed, baked daily — while they last.</div></div><div class="price">$4.95</div></div>
+    <div class="spell"><div class="lhs"><h3>Arugula Turkey <em>Sandwich</em></h3><div class="desc">A great quick bite for post-hike or post-meeting hunger.</div></div><div class="price">$11.50</div></div>
+    <div class="spell"><div class="lhs"><h3>House <em>Drip</em></h3><div class="desc">Two sizes. Quietly excellent. Always available.</div></div><div class="price">$3.75</div></div>
+  </div>
+</div></section>
+
+<section class="praise"><div class="wrap">
+  <div class="badge">✦ What Guests Say ✦</div>
+  <h2>The <em>kind words</em> drawer.</h2>
+  <div class="grid">
+    <div class="prc">
+      <div class="stars">★★★★★</div>
+      <div class="t">"Came here after a hike — great options for drinks and quick bites. The matcha tonic was very refreshing with a unique taste. Arugula turkey sandwich was a great pick."</div>
+      <div class="who">— Antonio J.</div>
+    </div>
+    <div class="prc">
+      <div class="stars">★★★★★</div>
+      <div class="t">"Overall 8/10 — strawberry shortcake latte w/ cream top, the matcha latte w/ cream top, the avocado truffle toast and almond croissant were all favorites."</div>
+      <div class="who">— Rachel K.</div>
+    </div>
+    <div class="prc">
+      <div class="stars">★★★★☆</div>
+      <div class="t">"Usually a line here but the coffee is good. Spanish latte was good. Parking garage is across the street — order online next time to skip the wait."</div>
+      <div class="who">— Sandra</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div class="grid">
+    <div>
+      <div class="badge">✦ Plan a Visit ✦</div>
+      <h2>Find <em>the door</em>.</h2>
+      <p class="intro">We're on South Beach Boulevard in La Mirada, with a parking garage across the street. Open every day, sunrise through evening — make of that what you will.</p>
+      <div class="info">
+        <div class="row">
+          <div class="ico">A</div>
+          <div><b>13391 S Beach Blvd, Suite A</b><span>La Mirada, CA 90638 · parking across the street</span></div>
+        </div>
+        <div class="row">
+          <div class="ico">☎</div>
+          <div><b><a href="tel:+15629021982">(562) 902-1982</a></b><span>Order ahead or ask about catering</span></div>
+        </div>
+        <div class="row">
+          <div class="ico">✦</div>
+          <div><b>Order online to skip the line</b><span>Especially weekday mornings — line moves but it builds quickly</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hourblk">
+      <h3>Hours</h3>
+      <div class="hr"><b>Mon</b><span>7:00 AM – 9:00 PM</span></div>
+      <div class="hr"><b>Tue</b><span>7:00 AM – 9:00 PM</span></div>
+      <div class="hr"><b>Wed</b><span>7:00 AM – 9:00 PM</span></div>
+      <div class="hr"><b>Thu</b><span>7:00 AM – 9:00 PM</span></div>
+      <div class="hr"><b>Fri</b><span>7:00 AM – 9:00 PM</span></div>
+      <div class="hr"><b>Sat</b><span>7:00 AM – 9:00 PM</span></div>
+      <div class="hr"><b>Sun</b><span>7:00 AM – 9:00 PM</span></div>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <div class="b">Enchanted Coffee Bar</div>
+  <div class="tag">— a little magic, in every cup —</div>
+  <div class="det">13391 S Beach Blvd, La Mirada · <a href="tel:+15629021982">(562) 902-1982</a></div>
   <div class="credit">Mockup designed by LJ Sites — interested in making this yours? <a href="mailto:LJsites.llc@gmail.com">LJsites.llc@gmail.com</a></div>
-</div></footer>
+</footer>
+
 </body></html>
